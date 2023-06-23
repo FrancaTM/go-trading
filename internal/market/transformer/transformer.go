@@ -16,9 +16,8 @@ func TransformInput(input dto.TradeInput) *entity.Order {
 	return order
 }
 
-// TODO: change TradeOutput -> OrderOutput
-func TransformOutput(order *entity.Order) *dto.TradeOutput {
-	output := &dto.TradeOutput{
+func TransformOutput(order *entity.Order) *dto.OrderOutput {
+	output := &dto.OrderOutput{
 		OrderID:    order.ID,
 		InvestorID: order.Investor.ID,
 		AssetID:    order.Asset.ID,
